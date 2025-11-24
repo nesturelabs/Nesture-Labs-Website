@@ -46,8 +46,8 @@ export const Header: React.FC = () => {
     { name: 'Home', path: '/', section: 'home' },
     { name: 'About', path: '/about', section: 'about' },
     { name: 'Services', path: '/services', section: 'services' },
-    // { name: 'Portfolio', path: '/portfolio', section: 'portfolio' },
-    // { name: 'Blog', path: '/blog', section: 'blog' },
+    { name: 'Portfolio', path: '/portfolio', section: 'portfolio' },
+    { name: 'Blog', path: '/blog', section: 'blog' },
     { name: 'Contact', path: '/contact', section: 'contact' }
   ];
 
@@ -87,13 +87,15 @@ export const Header: React.FC = () => {
               aria-label="Nesturelabs - Web Development and Digital Solutions"
               title="Go to homepage"
             >
-            <div 
-              className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center shadow-lg transition-transform group-hover:scale-105 group-hover:rotate-6"
-              role="img"
-              aria-label="Nesturelabs logo"
-            >
-              <span className="text-white font-bold text-lg" aria-hidden="true">N</span>
-            </div>
+            <img 
+              src="/favicon.svg" 
+              alt="Nesturelabs logo - Web Development and Digital Solutions"
+              className="w-16 h-16 transition-transform group-hover:scale-105 group-hover:rotate-6 drop-shadow-lg"
+              loading="eager"
+              decoding="async"
+              width={64}
+              height={64}
+            />
               {/* <motion.div 
                 className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center shadow-lg"
                 whileHover={{ scale: 1.05, rotate: 5 }}

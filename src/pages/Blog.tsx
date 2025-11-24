@@ -570,7 +570,7 @@ export const Blog: React.FC = () => {
                 />
                 <Button 
                   variant="secondary"
-                  className="bg-white text-gray-900 hover:bg-gray-100 shadow-xl whitespace-nowrap"
+                  className="shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-200"
                 >
                   Subscribe Now
                 </Button>

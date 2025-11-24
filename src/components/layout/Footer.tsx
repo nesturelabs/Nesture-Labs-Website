@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { MessageSquare, Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin, ArrowRight, Send, Check, AlertCircle } from 'lucide-react';
+import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin, ArrowRight, Send, Check, AlertCircle } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -196,9 +196,15 @@ export const Footer: React.FC = () => {
               >
                 {/* Logo and Brand */}
                 <div className="flex items-center space-x-3 mb-6">
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center shadow-lg">
-                    <MessageSquare className="w-7 h-7 text-white" />
-                  </div>
+                  <img 
+                    src="/favicon.svg" 
+                    alt="Nesturelabs logo - Web Development and Digital Solutions"
+                    className="w-20 h-20 drop-shadow-lg"
+                    loading="lazy"
+                    decoding="async"
+                    width={80}
+                    height={80}
+                  />
                   <span className="text-2xl font-bold text-white">Nesturelabs</span>
                 </div>
 
