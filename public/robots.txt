@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /admin/*
+Disallow: /private/
+Allow: /
+
+Sitemap: https://www.nesturelabs.com/sitemap.xml
