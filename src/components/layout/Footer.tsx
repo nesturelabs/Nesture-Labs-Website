@@ -199,11 +199,11 @@ export const Footer: React.FC = () => {
                   <img 
                     src="/favicon.svg" 
                     alt="Nesturelabs logo - Web Development and Digital Solutions"
-                    className="w-20 h-20 drop-shadow-lg"
+                    className="w-28 h-28 drop-shadow-lg"
                     loading="lazy"
                     decoding="async"
-                    width={80}
-                    height={80}
+                    width={112}
+                    height={112}
                   />
                   <span className="text-2xl font-bold text-white">Nesturelabs</span>
                 </div>
@@ -221,7 +221,7 @@ export const Footer: React.FC = () => {
                     <span>info@nesturelabs.com</span>
                   </div>
                   <div className="flex items-center space-x-3 text-gray-400 hover:text-white transition-colors group">
-                    <div className="w-10 h-10 bg-gray-800 rounded-lg flex items Guillemotrightcenter justify-center group-hover:bg-green-600 transition-colors">
+                    <div className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center group-hover:bg-green-600 transition-colors">
                       <Phone className="w-5 h-5" />
                     </div>
                     <span>+94 779 753 202</span>
