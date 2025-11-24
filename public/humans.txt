@@ -1,13 +1,69 @@
 /* TEAM */
-Nesture Labs — Nesture Labs
+Nesture Labs - Web, Mobile & AI Development Company
 Founder: Charm Thiekshana Perera
+Location: Colombo, Sri Lanka
 Website: https://www.nesturelabs.com
 Contact: info@nesturelabs.com
+Twitter: @nesturelabs
+LinkedIn: https://linkedin.com/company/nesturelabs
+GitHub: https://github.com/nesturelabs
+
+Development Team: Full-stack developers, UI/UX designers, AI engineers
+Technology Lead: Charm Thiekshana Perera
+
+/* SERVICES */
+Web Development: React, Next.js, TypeScript, Node.js
+Mobile Development: Flutter, React Native, iOS, Android
+AI Solutions: Machine Learning, Computer Vision, NLP
+Design: UI/UX Design, Product Design, Brand Identity
+Cloud & DevOps: AWS, Azure, Docker, Kubernetes
+
+/* TECHNOLOGIES */
+Frontend: React 18, TypeScript, Tailwind CSS, Framer Motion
+Backend: Node.js, Express, Python, FastAPI
+Database: PostgreSQL, MongoDB, Redis
+Mobile: Flutter, React Native
+AI/ML: TensorFlow, PyTorch, OpenCV
+Tools: Git, Docker, AWS, Vercel
+DevOps: CI/CD, GitHub Actions, Cloudflare
+
+/* STANDARDS */
+HTML5, CSS3, JavaScript ES6+, TypeScript
+Web Accessibility (WCAG 2.1 AA)
+Performance (Core Web Vitals)
+SEO Best Practices
+PWA Standards
+Security Headers
 
 /* SITE */
-Standards: HTML5, CSS3, JavaScript
-Framework: Next.js + Tailwind (recommended)
-Design: Neumorphism theme
+Last update: 2024
+Standards: HTML5, CSS3, JavaScript, TypeScript
+Components: React 18, Vite 5
+Styling: Tailwind CSS 3, PostCSS
+Framework: React with TypeScript
+Design System: Modern & Accessible UI
+Features: PWA, Responsive Design, SEO Optimized
+
+/* PERFORMANCE */
+LCP: < 2.5s
+FID: < 100ms
+CLS: < 0.1
+Accessibility: 95+ Score
+SEO: 95+ Score
+Best Practices: 95+ Score
 
 /* THANKS */
-Thanks to the open-source community
+Special thanks to:
+- The React community and maintainers
+- Vite team for excellent build tooling
+- Tailwind CSS for utility-first CSS
+- Framer Motion for animations
+- Open-source contributors worldwide
+- Our clients and partners for their trust
+
+/* NOTE */
+Built with passion in Sri Lanka
+Innovating digital solutions since 2020
+Committed to quality and performance
+Accessibility-first approach
+Mobile-first responsive design

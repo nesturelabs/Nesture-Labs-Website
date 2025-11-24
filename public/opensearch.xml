@@ -1,7 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
-  <ShortName>Nesturelabs Search</ShortName>
-  <Description>Search the Nesturelabs website</Description>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/"
+                       xmlns:moz="http://www.mozilla.org/2006/browser/search/">
+  <ShortName>Nesturelabs</ShortName>
+  <Description>Search Nesture Labs - Web, Mobile & AI Development Company in Sri Lanka</Description>
   <InputEncoding>UTF-8</InputEncoding>
-  <Url type="text/html" template="https://www.nesturelabs.com/search?q={searchTerms}"/>
+  <OutputEncoding>UTF-8</OutputEncoding>
+  
+  <!-- Icons -->
+  <Image width="16" height="16" type="image/x-icon">https://nesturelabs.com/favicon.ico</Image>
+  <Image width="32" height="32" type="image/png">https://nesturelabs.com/favicon-32x32.png</Image>
+  <Image width="64" height="64" type="image/png">https://nesturelabs.com/favicon-96x96.png</Image>
+  
+  <!-- Search URLs -->
+  <Url type="text/html" 
+       method="GET"
+       template="https://nesturelabs.com/search?q={searchTerms}&amp;utm_source=opensearch&amp;utm_medium=search"/>
+  
+  <Url type="application/x-suggestions+json"
+       method="GET"
+       template="https://nesturelabs.com/api/suggestions?q={searchTerms}&amp;format=json"/>
+  
+  <!-- Search Parameters -->
+  <Query role="example" searchTerms="web development Sri Lanka"/>
+  <Query role="example" searchTerms="mobile app development"/>
+  <Query role="example" searchTerms="AI solutions Colombo"/>
+  
+  <!-- Attribution & Metadata -->
+  <Developer>Nesture Labs</Developer>
+  <Attribution>Search data &amp;copy; Nesture Labs 2024. All rights reserved.</Attribution>
+  <SyndicationRight>open</SyndicationRight>
+  <AdultContent>false</AdultContent>
+  
+  <!-- Language Support -->
+  <Language>en-us</Language>
+  <Language>en-gb</Language>
+  <Language>en</Language>
+  <Language>*</Language>
+  
+  <!-- Input Encoding -->
+  <OutputEncoding>UTF-8</OutputEncoding>
+  <InputEncoding>UTF-8</InputEncoding>
+  
+  <!-- Mozilla Specific -->
+  <moz:SearchForm>https://nesturelabs.com/search</moz:SearchForm>
+  
+  <!-- Additional Features -->
+  <Tags>web development mobile apps AI solutions technology Sri Lanka</Tags>
+  <LongName>Nesture Labs Search</LongName>
+  <Contact>info@nesturelabs.com</Contact>
 </OpenSearchDescription>
