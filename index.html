@@ -8,41 +8,56 @@
     <title>Nesturelabs - Web, Mobile & AI Development Company | Sri Lanka</title>
     <meta name="title" content="Nesturelabs - Web, Mobile & AI Development Company | Sri Lanka" />
     <meta name="description" content="Leading technology company in Sri Lanka specializing in web development, mobile apps, and AI solutions. Transform your business with cutting-edge digital solutions. Get a free consultation today." />
-    <meta name="keywords" content="web development Sri Lanka, mobile app development, AI solutions, software company, digital transformation, React development, Flutter apps, machine learning" />
-    <meta name="robots" content="index, follow" />
+    <meta name="keywords" content="web development Sri Lanka, mobile app development, AI solutions, software company, digital transformation, React development, Flutter apps, machine learning, Sri Lanka tech company" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
     <meta name="language" content="English" />
     <meta name="author" content="Nesturelabs" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="rating" content="general" />
+    <meta name="distribution" content="global" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://nesturelabs.com/" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://nesturelabs.com/" />
-    <meta property="og:title" content="Nesturelabs - Web, Mobile & AI Development Company" />
+    <meta property="og:title" content="Nesturelabs - Web, Mobile & AI Development Company | Sri Lanka" />
     <meta property="og:description" content="Leading technology company specializing in web development, mobile apps, and AI solutions. Transform your business with cutting-edge digital solutions." />
     <meta property="og:image" content="https://nesturelabs.com/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Nesturelabs - Web, Mobile & AI Development Company" />
     <meta property="og:site_name" content="Nesturelabs" />
     <meta property="og:locale" content="en_US" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://nesturelabs.com/" />
-    <meta property="twitter:title" content="Nesturelabs - Web, Mobile & AI Development Company" />
+    <meta property="twitter:title" content="Nesturelabs - Web, Mobile & AI Development Company | Sri Lanka" />
     <meta property="twitter:description" content="Leading technology company specializing in web development, mobile apps, and AI solutions." />
     <meta property="twitter:image" content="https://nesturelabs.com/twitter-image.jpg" />
+    <meta property="twitter:image:alt" content="Nesturelabs - Web, Mobile & AI Development Company" />
     <meta property="twitter:creator" content="@nesturelabs" />
+    <meta property="twitter:site" content="@nesturelabs" />
 
     <!-- Favicons -->
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
     <meta name="theme-color" content="#1f2937" />
+    <meta name="msapplication-TileColor" content="#1f2937" />
 
-    <!-- Fonts -->
+    <!-- Preload Critical Resources -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" as="style" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" /></noscript>
+
+    <!-- Preload Logo -->
+    <link rel="preload" href="https://nesturelabs.com/logo.png" as="image" />
 
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -57,13 +72,17 @@
           "@type": "PostalAddress",
           "streetAddress": "123 Innovation Drive",
           "addressLocality": "Colombo",
+          "addressRegion": "Western Province",
+          "postalCode": "00100",
           "addressCountry": "LK"
         },
         "contactPoint": {
           "@type": "ContactPoint",
           "telephone": "+94-11-123-4567",
           "contactType": "customer service",
-          "email": "info@nesturelabs.com"
+          "email": "info@nesturelabs.com",
+          "areaServed": "LK",
+          "availableLanguage": ["English", "Sinhala"]
         },
         "sameAs": [
           "https://facebook.com/nesturelabs",
@@ -77,13 +96,60 @@
           "name": "Charm Thiekshana"
         },
         "numberOfEmployees": "10-50",
-        "industry": "Software Development"
+        "industry": "Software Development",
+        "knowsAbout": [
+          "Web Development",
+          "Mobile App Development",
+          "Artificial Intelligence",
+          "Machine Learning",
+          "React",
+          "Flutter",
+          "Digital Transformation"
+        ],
+        "areaServed": "Sri Lanka"
+      }
+    </script>
+
+    <!-- Additional Organization Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Nesturelabs",
+        "url": "https://nesturelabs.com/",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://nesturelabs.com/search?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
       }
     </script>
   </head>
   <body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
     <div id="root"></div>
+    
+    <!-- Schema markup for main content will be added dynamically by your React app -->
+    
     <!-- Vite will replace this with the proper bundled script after build -->
     <script type="module" src="/src/main.tsx"></script>
+    
+    <!-- Performance optimization: Load non-critical resources after page load -->
+    <script>
+      // Load non-critical CSS after page load
+      function loadCSS(href) {
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = href;
+        document.head.appendChild(link);
+      }
+      
+      // Load non-critical resources after page load
+      window.addEventListener('load', function() {
+        // Load any non-critical CSS or scripts here
+      });
+    </script>
   </body>
 </html>
