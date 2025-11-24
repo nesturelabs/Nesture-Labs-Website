@@ -10,6 +10,8 @@ import { useTheme } from './ThemeProvider';
 export const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isHeaderVisible, setIsHeaderVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
   // const [language, setLanguage] = useState('EN');
   const [activeSection, setActiveSection] = useState('home');
   const [isQuoteFormOpen, setIsQuoteFormOpen] = useState(false);
@@ -18,11 +20,23 @@ export const Header: React.FC = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      const currentScrollY = window.scrollY;
+      
+      setIsScrolled(currentScrollY > 50);
+      
+      // Auto-hide header: hide when scrolling down, show when scrolling up
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        // Scrolling down
+        setIsHeaderVisible(false);
+      } else {
+        // Scrolling up
+        setIsHeaderVisible(true);
+      }
+      setLastScrollY(currentScrollY);
       
       // Scroll spy for active section highlighting
       const sections = ['home', 'services', 'about', 'portfolio', 'blog', 'contact'];
-      const scrollPosition = window.scrollY + 100;
+      const scrollPosition = currentScrollY + 100;
       
       for (const section of sections) {
         const element = document.getElementById(section);
@@ -40,14 +54,14 @@ export const Header: React.FC = () => {
     
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [lastScrollY]);
 
   const navItems = [
     { name: 'Home', path: '/', section: 'home' },
     { name: 'About', path: '/about', section: 'about' },
     { name: 'Services', path: '/services', section: 'services' },
-    // { name: 'Portfolio', path: '/portfolio', section: 'portfolio' },
-    // { name: 'Blog', path: '/blog', section: 'blog' },
+    { name: 'Portfolio', path: '/portfolio', section: 'portfolio' },
+    { name: 'Blog', path: '/blog', section: 'blog' },
     { name: 'Contact', path: '/contact', section: 'contact' }
   ];
 
@@ -68,7 +82,9 @@ export const Header: React.FC = () => {
 
   return (
     <>
-      <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 transform ${
+          isHeaderVisible ? 'translate-y-0' : '-translate-y-full'
+        } ${
           isScrolled || isMenuOpen
             ? isDarkMode 
               ? 'bg-gray-900/98 backdrop-blur-lg border-b border-gray-800 shadow-lg' 
@@ -78,7 +94,7 @@ export const Header: React.FC = () => {
         role="banner"
         aria-label="Main navigation"
       >
-        <nav className="container mx-auto px-4 py-3 lg:py-4" role="navigation" aria-label="Primary navigation">
+        <nav className="container mx-auto px-3 sm:px-4 py-2 lg:py-3" role="navigation" aria-label="Primary navigation">
           <div className="flex items-center justify-between">
             {/* Logo */}
             <Link 
@@ -87,13 +103,15 @@ export const Header: React.FC = () => {
               aria-label="Nesturelabs - Web Development and Digital Solutions"
               title="Go to homepage"
             >
-            <div 
-              className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center shadow-lg transition-transform group-hover:scale-105 group-hover:rotate-6"
-              role="img"
-              aria-label="Nesturelabs logo"
-            >
-              <span className="text-white font-bold text-lg" aria-hidden="true">N</span>
-            </div>
+            <img 
+              src="/favicon.svg" 
+              alt="Nesturelabs logo - Web Development and Digital Solutions"
+              className="w-16 h-16 transition-transform group-hover:scale-105 group-hover:rotate-6 drop-shadow-lg"
+              loading="eager"
+              decoding="async"
+              width={64}
+              height={64}
+            />
               {/* <motion.div 
                 className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center shadow-lg"
                 whileHover={{ scale: 1.05, rotate: 5 }}

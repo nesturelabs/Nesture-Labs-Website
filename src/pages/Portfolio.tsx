@@ -432,14 +432,14 @@ export const Portfolio: React.FC = () => {
                 <Button 
                   size="lg" 
                   variant="secondary"
-                  className="bg-white text-gray-900 hover:bg-gray-100 shadow-xl"
+                  className="shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-200"
                 >
                   Get Free Quote
                 </Button>
                 <Button 
                   size="lg" 
                   variant="outline"
-                  className="border-2 border-white text-white hover:bg-white hover:text-gray-900"
+                  className="border-2 border-white text-white hover:bg-blue hover:text-gray-900 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200"
                 >
                   View More Projects
                 </Button>

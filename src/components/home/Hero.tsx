@@ -181,7 +181,7 @@ export const Hero: React.FC = () => {
               style={{
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
-              }}
+              } as React.CSSProperties}
             />
           ))}
         </div>

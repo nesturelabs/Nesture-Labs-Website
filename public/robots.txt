@@ -1,7 +1,127 @@
+# https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow: /admin/
-Disallow: /admin/*
-Disallow: /private/
 Allow: /
 
+# Core Pages - Allow all
+Allow: /about
+Allow: /services
+Allow: /portfolio
+Allow: /blog
+Allow: /contact
+Allow: /privacy-policy
+Allow: /terms-of-service
+
+# Directories to Disallow
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/private/
+Disallow: /dashboard/
+Disallow: /cms/
+Disallow: /backoffice/
+Disallow: /test/
+Disallow: /staging/
+
+# File Types to Disallow
+Disallow: /*.json$
+Disallow: /*.xml$
+Disallow: /*.env$
+Disallow: /*.config$
+Disallow: /search?
+Disallow: /private-files/
+
+# Parameters to Disallow
+Disallow: /*?utm_
+Disallow: /*?ref=
+Disallow: /*?session=
+Disallow: /*?token=
+Disallow: /*?debug=
+Disallow: /*?preview=
+
+# Allow Important Parameters
+Allow: /search?q=
+Allow: /blog?category=
+Allow: /portfolio?type=
+Allow: /api/public/
+
+# Sitemaps
 Sitemap: https://www.nesturelabs.com/sitemap.xml
+Sitemap: https://www.nesturelabs.com/sitemap-pages.xml
+Sitemap: https://www.nesturelabs.com/sitemap-blog.xml
+Sitemap: https://www.nesturelabs.com/sitemap-portfolio.xml
+
+# Crawl Delay (adjust based on server capacity)
+Crawl-delay: 1
+
+# AI Bots - Allow with specific rules
+User-agent: GPTBot
+Allow: /
+Crawl-delay: 2
+
+User-agent: ChatGPT-User
+Allow: /
+Crawl-delay: 2
+
+User-agent: Google-Extended
+Allow: /
+Crawl-delay: 1
+
+# Search Engine Bots
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 2
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 2
+
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 1
+
+# Analytics & Monitoring Bots
+User-agent: Googlebot-Image
+Allow: /
+Crawl-delay: 1
+
+User-agent: Googlebot-Video
+Allow: /
+Crawl-delay: 1
+
+# Bad Bots - Block completely
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: MauiBot
+Disallow: /
+
+User-agent: PetalBot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+# Scrapers & Aggregators
+User-agent: CCBot
+Disallow: /
+
+User-agent: GPTBot
+User-agent: ChatGPT-User
+Allow: /blog/
+Allow: /portfolio/
+Allow: /services/
+Disallow: /admin/
+Disallow: /api/
+Crawl-delay: 2
