@@ -4,7 +4,11 @@ import { useLocation } from "react-router-dom";
 
 declare global {
   interface Window {
-    gtag?: (...args: any[]) => void;
+    gtag?: (
+      command: "config" | "set" | "event",
+      targetId: string,
+      config?: Record<string, string | number | boolean>
+    ) => void;
   }
 }
 
